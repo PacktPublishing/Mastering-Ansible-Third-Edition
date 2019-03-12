@@ -1,0 +1,4 @@
+---
+- name: included task
+  debug:
+    msg: "My data is {{ data }}"

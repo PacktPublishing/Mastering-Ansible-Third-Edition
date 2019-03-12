@@ -1,0 +1,45 @@
+--- 
+- name: boot server 
+  hosts: localhost 
+  gather_facts: false 
+
+  tasks:
+    - name: boot the server
+      os_server:
+        auth:
+          auth_url: "http://devstack.example.com/identity/v3"
+          username: "admin"
+          password: "password"
+          project_name: "demo"
+          project_domain_name: "default"
+          user_domain_name: "default"
+        flavor: "ds1G"
+        image: "Fedora 29"
+        key_name: "mastery-key"
+        network: "private"
+        name: "mastery1"
+      register: newserver
+
+    - name: show floating ip
+      debug:
+        var: newserver.openstack.accessIPv4
+
+    - name: add new server
+      add_host:
+        name: "mastery1"
+        ansible_ssh_host: "{{ newserver.openstack.accessIPv4 }}"
+        ansible_ssh_user: "fedora" 
+
+- name: configure server 
+  hosts: mastery1 
+  gather_facts: false 
+ 
+  tasks: 
+    - name: install python 
+      raw: "sudo dnf install -y python python2-dnf" 
+
+    - name: install imagemagick 
+      dnf: 
+        name: "ImageMagick" 
+      become: "yes" 
+

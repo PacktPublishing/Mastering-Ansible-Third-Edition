@@ -1,0 +1,25 @@
+--- 
+- name: boot server 
+  hosts: localhost 
+  gather_facts: false 
+
+  tasks:
+    - name: boot the server
+      os_server:
+        auth:
+          auth_url: "http://devstack.example.com/identity/v3"
+          username: "admin"
+          password: "password"
+          project_name: "demo"
+          project_domain_name: "default"
+          user_domain_name: "default"
+        flavor: "ds1G"
+        image: "Fedora 29"
+        key_name: "mastery-key"
+        network: "private"
+        name: "mastery1"
+      register: newserver
+
+    - name: show floating ip
+      debug:
+        var: newserver.openstack.accessIPv4

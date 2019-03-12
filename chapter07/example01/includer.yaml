@@ -1,0 +1,11 @@
+--- 
+- name: task inclusion 
+  hosts: localhost 
+  gather_facts: false 
+ 
+  tasks: 
+  - name: non-included task 
+    debug: 
+      msg: "I am not included" 
+
+  - include: more-tasks.yaml 

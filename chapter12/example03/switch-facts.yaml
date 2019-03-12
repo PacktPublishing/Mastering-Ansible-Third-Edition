@@ -1,0 +1,12 @@
+---
+- name: "gather device facts"
+  hosts: all
+  gather_facts: false
+
+  tasks:
+  - name: gather ios facts
+    ios_facts:
+    when: ansible_network_os == 'ios'
+  - name: gather cumulus facts
+    setup:
+    when: inventory_hostname in groups['cumulus']

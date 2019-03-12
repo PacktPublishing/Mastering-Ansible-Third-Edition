@@ -1,0 +1,7 @@
+--- 
+- name: included task 1 
+  debug: 
+    msg: "I combine {{ item }} and {{ include_item }}" 
+  with_items: 
+    - a 
+    - b 

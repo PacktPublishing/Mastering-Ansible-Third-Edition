@@ -1,0 +1,25 @@
+--- 
+- name: sub-element access styles 
+  hosts: localhost 
+  gather_facts: false 
+  strategy: debug 
+ 
+  vars: 
+    - derp: 
+        keys: 
+          - c 
+          - d 
+ 
+  tasks: 
+    - name: subscript style 
+      debug: 
+        var: derp['keys'] 
+ 
+    - name: failing task 
+      debug: 
+        msg: "this is {{ derp['missing'] }}" 
+ 
+    - name: final task 
+      debug: 
+        msg: "my only friend the end" 
+

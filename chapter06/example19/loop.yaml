@@ -1,0 +1,13 @@
+---
+- name: looping demo
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+  - name: create a directory
+    file:
+      path: "{{ item }}"
+      state: directory
+    loop:
+      - /srv/whiskey/alpha
+      - /srv/whiskey/beta

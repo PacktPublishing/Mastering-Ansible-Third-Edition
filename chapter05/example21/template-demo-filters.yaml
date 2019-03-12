@@ -1,0 +1,16 @@
+--- 
+- name: demo the filters 
+  hosts: localhost 
+  gather_facts: false  
+  tasks: 
+    - name: read file 
+      slurp: 
+        src: derp 
+      register: derp  
+    - name: display file content (undecoded) 
+      debug: 
+        var: derp.content  
+    - name: display file content (decoded) 
+      debug: 
+        var: derp.content | b64decode
+

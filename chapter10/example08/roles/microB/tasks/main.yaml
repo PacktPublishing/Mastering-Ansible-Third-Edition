@@ -1,0 +1,6 @@
+--- 
+- name: install microB package 
+  debug: 
+    msg: "This is installing B" 
+  changed_when: true 
+  notify: restart microB

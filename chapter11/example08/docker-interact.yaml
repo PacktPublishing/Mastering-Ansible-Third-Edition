@@ -1,0 +1,18 @@
+--- 
+- name: build an image 
+  hosts: localhost 
+  gather_facts: false 
+ 
+  tasks: 
+    - name: build that image 
+      docker_image: 
+        path: . 
+        state: present 
+        name: fedora-moo 
+ 
+    - name: start the container 
+      docker_container: 
+        name: playbook-container 
+        image: fedora-moo 
+        ports: 8080:80 
+        state: started 

@@ -1,0 +1,17 @@
+[switches:children]
+ios
+cumulus
+
+[ios]
+ios01 ansible_host=ios01.mastery.example.com
+
+[cumulus]
+cumulus01 ansible_host=cumulus01.mastery.example.com
+
+[cumulus:vars]
+ansible_user=cumulus
+
+[ios:vars]
+ansible_network_os=ios
+ansible_become=yes
+ansible_become_method=enable 

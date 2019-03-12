@@ -1,0 +1,7 @@
+[cumulus]
+mastery-switch1 ansible_host=192.168.81.142
+
+[cumulus:vars]
+ansible_user=cumulus
+ansible_ssh_pass=CumulusLinux!
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q bastion01"'
