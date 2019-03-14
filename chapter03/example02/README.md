@@ -5,20 +5,15 @@ Tested on:
 
 To create a new self-signed certificate:
 
-    New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName
-"$env:computername" -FriendlyName "WinRM HTTPS Certificate" -NotAfter (Get-
-Date).AddYears(5)
+    New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "$env:computername" -FriendlyName "WinRM HTTPS Certificate" -NotAfter (Get-Date).AddYears(5)
 
 To set up a new listener:
 
-    New-Item -Path WSMan:\Localhost\Listener -Transport HTTPS -Address * -
-CertificateThumbprint <thumbprint of certificate>
+    New-Item -Path WSMan:\Localhost\Listener -Transport HTTPS -Address * -CertificateThumbprint <thumbprint of certificate>
 
 To open the firewall for WinRM over HTTPS:
 
-    New-NetFirewallRule -DisplayName 'WinRM HTTPS Management' -Profile
-Domain,Private -Direction Inbound -Action Allow -Protocol TCP -LocalPort
-5986
+    New-NetFirewallRule -DisplayName 'WinRM HTTPS Management' -Profile Domain,Private -Direction Inbound -Action Allow -Protocol TCP -LocalPort 5986
 
 To enable Basic Authentication for WinRM:
 

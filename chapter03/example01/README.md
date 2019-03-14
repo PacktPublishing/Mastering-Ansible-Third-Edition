@@ -5,13 +5,11 @@ Tested on:
 
 Run this command:
 
-    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-
-Subsystem-Linux
+    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
 If installing Linux without the aid of the Windows Store:
 
-    Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx
--UseBasicParsing
+    Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx -UseBasicParsing
 
     Rename-Item Ubuntu.appx Ubuntu.zip
     Expand-Archive Ubuntu.zip C:\WSL\Ubuntu
