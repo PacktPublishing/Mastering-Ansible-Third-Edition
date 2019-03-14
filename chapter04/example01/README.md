@@ -1,21 +1,34 @@
 # Instructions
 
 Tested on:
-- Windows 10 build 17763
+- CentOS 7.6
+- Ansible 2.7.5
 
-Run this command:
+Below are the commands referenced in the book to install AWX and enable HTTPS support:
 
-    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-
-Subsystem-Linux
+    git clone https://github.com/ansible/awx.git
 
-If installing Linux without the aid of the Windows Store:
+    cd awx/installer
 
-    Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx
--UseBasicParsing
+    sudo ansible-playbook -i inventory install.yml
 
-    Rename-Item Ubuntu.appx Ubuntu.zip
-    Expand-Archive Ubuntu.zip C:\WSL\Ubuntu
+    sudo yum install nginx
 
-    C:\WSL\Ubuntu\ubuntu.exe
+    openssl req -x509 -nodes -newkey rsa:4096 -keyout /etc/pki/tls/private/mastery.example.com.key -out /etc/pki/tls/certs/mastery.example.com.crt -days 3650 -subj "/C=GB/CN=mastery.example.com"
 
+Change the default listening port in `nginx.conf`:
+
+    server {
+      listen 81 default_server;
+      listen [::]:81 default_server;
+
+Enable and start the service:
+
+    sudo systemctl enable nginx.service
+    sudo systemctl start nginx.service
+
+Allow HTTPS through the firewall:
+
+    sudo firewall-cmd --permanent --add-service=https
+    sudo firewall-cmd --reload
 
