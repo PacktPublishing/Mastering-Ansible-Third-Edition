@@ -8,6 +8,7 @@
     command: git branch -D badfeature
     args:
       chdir: /srv/app
+    ignore_unreachable: true
   - name: important task
     debug:
       msg: It is important we attempt this task!

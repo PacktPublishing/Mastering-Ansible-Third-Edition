@@ -6,9 +6,8 @@
   tasks:
   - name: create a directory
     file:
-      path: /srv/whiskey/alpha
+      path: "{{ item }}"
       state: directory
-  - name: create another directory
-    file:
-      path: /srv/whiskey/beta
-      state: directory
+    loop:
+      - /srv/whiskey/alpha
+      - /srv/whiskey/beta

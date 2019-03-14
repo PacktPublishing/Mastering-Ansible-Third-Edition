@@ -6,4 +6,4 @@ Tested on:
 
 Run this playbook using the command:
 
-    ansible-playbook -i mastery-hosts error.yaml
+    ansible-playbook -i mastery-hosts loop.yaml

@@ -5,6 +5,7 @@ Tested on:
 - Ansible 2.7.5
 
 To create the empty repository to be used for testing this playbook, you can run the following commands:
+
     mkdir /srv/app
     cd /srv/app
     git init
