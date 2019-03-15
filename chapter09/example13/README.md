@@ -24,7 +24,7 @@ Run these commands to perform the code tests described in the book:
     test/runner/ansible-test integration -v posix/ci/
     make pep8
 
-Mix tabs and spaces on a line of your choosing in a file such as: lib/ansible/modules/cloud/openstack/os_zone.py
+Mix tabs and spaces on a line of your choosing in a file such as: `lib/ansible/modules/cloud/openstack/os_zone.py`
 
     make pep8
 
