@@ -11,19 +11,21 @@ For this example, download the OpenStack dynamic inventory provider and associat
     
 Next create an appropriate `clouds.yaml` file for your environment - for example:
 
-   clouds:
-      devstack:
-        auth:
-          auth_url: http://devstack.example.com/identity/v3
-          username: admin
-          password: password
-          project_name: demo
-          project_domain_name: "default"
-          user_domain_name: "default"
-    ansible:
-      use_hostnames: True
-      expand_hostvars: True
-      fail_on_errors: True 
+```yaml
+clouds:
+  devstack:
+    auth:
+      auth_url: http://devstack.example.com/identity/v3
+      username: admin
+      password: password
+      project_name: demo
+      project_domain_name: "default"
+      user_domain_name: "default"
+  ansible:
+    use_hostnames: True
+    expand_hostvars: True
+    fail_on_errors: True 
+```
 
 Test this dynamic inventory provider as described in the book:
 
