@@ -33,7 +33,6 @@ for outergroup in inventory:
             if grouphost in inventory[group].get('hosts', {}):
                 agghostvars[grouphost].update(inventory[group].get('vars', {}))
         agghostvars[grouphost].update(hostvars.get(grouphost, {}))
-        #print(json.dumps(agghostvars[grouphost]))
 
 inventory['_meta'] = {'hostvars': agghostvars}
 
