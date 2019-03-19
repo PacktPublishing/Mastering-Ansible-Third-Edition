@@ -18,8 +18,8 @@ Create a new HTTPS listener referring to the new CA signed certificate:
 
 Place a copy of the Base64 encoded CA certificate for the above in `/etc/pki/ca-trust/source/anchors/` on the Ansible host. Then run:
 
-    update-ca-trust enable
-    update-ca-trust extract
+    sudo update-ca-trust enable
+    sudo update-ca-trust extract
 
 Finally, update the enclosed inventory with the correct details for your Windows host and run the following command to test Ansible connectivity:
 
