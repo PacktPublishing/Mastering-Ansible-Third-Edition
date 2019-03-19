@@ -6,5 +6,4 @@ ansible_user=administrator@MASTERY.EXAMPLE.COM
 ansible_password="password"
 ansible_port=5986
 ansible_connection=winrm
-ansible_winrm_ca_trust_path=/etc/pki/ca-trust/extracted/pem/tls-cabundle.
-pem
+ansible_winrm_ca_trust_path=/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
