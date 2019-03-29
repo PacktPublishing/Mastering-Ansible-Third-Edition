@@ -41,9 +41,9 @@ With the following software and hardware list you can run all code files present
 | Chapter | Software required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
 | All | Ansible 2.7.5 | CentOS 7+, Ubuntu 16.04+ |
-| 4 | AWX | CentOS 7/RHEL7 |
 | 3 | Windows 10 | N/A |
 | 3 | Windows Server 2016/2019 | N/A |
+| 4 | AWX | CentOS 7/RHEL7 |
 | 11 | OpenStack (devstack)| Tested on Ubuntu 16.04  |
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://www.packtpub.com/sites/default/files/downloads/9781789951547_ColorImages.pdf).
