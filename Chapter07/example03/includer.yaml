@@ -1,0 +1,15 @@
+---
+- name: touch files
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+  - include: files.yaml
+    vars:
+      path: /tmp/foo
+      file: herp
+
+  - include: files.yaml
+    vars:
+      path: /tmp/foo
+      file: derp

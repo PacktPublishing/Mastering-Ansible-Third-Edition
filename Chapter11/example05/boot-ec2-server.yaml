@@ -1,0 +1,49 @@
+--- 
+- name: boot server 
+  hosts: localhost 
+  gather_facts: false
+
+  tasks: 
+    - name: boot the server 
+      ec2:
+        access_key: < insert your access key here >
+        secret_key: < insert your secret key here >
+        keypair: jamesatqurueuw2
+        group: default
+        type: t2.medium
+        image: "ami-000848c4d7224c557"
+        region: eu-west-2
+        instance_tags: "{'ansible_group':'mastery_server', 'Name':'mastery1'}"
+        exact_count: 1
+        count_tag: 
+          ansible_group: "mastery_server"
+        wait: true
+        user_data: |
+          #!/bin/bash
+          sudo dnf install -y python python2-dnf
+      register: newserver
+
+    - name: show floating ip 
+      debug: 
+        var: newserver.tagged_instances[0].public_ip
+
+    - name: Wait for SSH to come up
+      wait_for_connection:
+        delay: 120
+        timeout: 320
+
+    - name: add new server 
+      add_host: 
+        name: "mastery1" 
+        ansible_ssh_host: "{{ newserver.tagged_instances[0].public_ip }}" 
+        ansible_ssh_user: "fedora"
+
+- name: configure server
+  hosts: mastery1
+  gather_facts: false
+
+  tasks:
+    - name: install imagemagick
+      dnf:
+        name: "ImageMagick"
+      become: "yes"

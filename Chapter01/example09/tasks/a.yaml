@@ -1,0 +1,7 @@
+--- 
+- name: where am I 
+  debug: 
+    msg: "I am task a" 
+ 
+- include: b.yaml 
+

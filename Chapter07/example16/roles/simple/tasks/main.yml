@@ -1,0 +1,4 @@
+--- 
+- name: print a variable 
+  debug: 
+    var: derp

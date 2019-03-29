@@ -1,0 +1,5 @@
+--- 
+- name: restart microA 
+  debug: 
+    msg: "microA is restarting" 
+  when: not upgrade | default(false) | bool 

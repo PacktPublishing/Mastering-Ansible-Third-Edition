@@ -1,0 +1,10 @@
+---
+- name: create leading path
+  file:
+    path: "{{ path }}"
+    state: directory
+
+- name: touch the file
+  file:
+    path: "{{ path + '/' + file }}"
+    state: touch

@@ -1,0 +1,12 @@
+--- 
+- name: create leading path 
+  file: 
+    path: "{{ item.value.path }}" 
+    state: directory 
+  with_dict: "{{ files }}" 
+ 
+- name: touch the file 
+  file: 
+    path: "{{ item.value.path + '/' + item.key }}" 
+    state: touch 
+  with_dict: "{{ files }}" 

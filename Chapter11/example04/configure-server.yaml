@@ -1,0 +1,14 @@
+--- 
+- name: configure server 
+  hosts: mastery1 
+  gather_facts: false 
+  remote_user: fedora 
+ 
+  tasks: 
+    - name: install python 
+      raw: "sudo dnf install -y python python2-dnf" 
+ 
+    - name: install imagemagick 
+      dnf: 
+        name: "ImageMagick" 
+      become: "yes" 

@@ -1,0 +1,15 @@
+---
+- name: task inclusion
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+  - include: more-tasks.yaml
+    vars:
+      data: first
+    tags: first
+
+  - include: more-tasks.yaml
+    vars:
+      data: second
+    tags: second
