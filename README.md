@@ -1,23 +1,25 @@
-# Hands-On Cloud Administration in Azure
+# Mastering Ansible - Third Edition
 
-<a href="https://www.packtpub.com/virtualization-and-cloud/hands-cloud-administration-azure?utm_source=github&utm_medium=repository&utm_campaign=9781789134964 "><img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B10737_MockupCover_mew.png" alt="Hands-On Cloud Administration in Azure" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/virtualization-and-cloud/mastering-ansible-third-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789951547 "><img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B12929_pub.png" alt="Mastering Ansible - Third Edition" height="256px" align="right"></a>
 
-This is the code repository for [Hands-On Cloud Administration in Azure](https://www.packtpub.com/virtualization-and-cloud/hands-cloud-administration-azure?utm_source=github&utm_medium=repository&utm_campaign=9781789134964 ), published by Packt.
+This is the code repository for [Mastering Ansible - Third Edition](https://www.packtpub.com/virtualization-and-cloud/mastering-ansible-third-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789951547 ), published by Packt.
 
-**Implement, monitor, and manage important Azure services and components including IaaS and PaaS**
+**Effectively automate configuration management and deployment challenges with Ansible 2.7**
 
 ## What is this book about?
-Azure continues to dominate the public cloud market and grow rapidly thanks to a number of recent innovations. Azure's wide range of services and support has led to a large number of customers switching to Azure cloud.
+Automation is essential for success in the modern world of DevOps. Ansible provides a simple, yet powerful, automation engine for tackling complex automation challenges.
 
 This book covers the following exciting features:
-Understand the concepts of IaaS and PaaS 
-Learn design patterns for Azure solutions 
-Design data solutions in Azure 
-Explore concepts of hybrid clouds with Azure 
-Implement Azure Security in cloud 
-Create and manage Azure resources with script-based tools 
+Gain an in-depth understanding of how Ansible works under the hood 
+Fully automate Ansible playbook executions with encrypted data 
+Access and manipulate variable data within playbooks 
+Use blocks to perform failure recovery or cleanup 
+Explore the Playbook debugger and the Ansible Console 
+Troubleshoot unexpected behavior effectively 
+Work with cloud infrastructure providers and container systems 
+Develop custom modules, plugins, and dynamic inventory sources 
 
-If you feel this book is for you, get your [copy](https://www.amazon.com/dp/178913496X) today!
+If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1789951542) today!
 
 <a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
 alt="https://www.packtpub.com/" border="5" /></a>
@@ -27,48 +29,45 @@ All of the code is organized into folders. For example, Chapter02.
 
 The code will look like the following:
 ```
-{
-  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-    "name": {
+net stop certsvc
+net start certsvc
 ```
 
 **Following is what you need for this book:**
-Hands-On Cloud Administration in Azure is for system administrators, cloud admins, cloud engineers, and DevOps engineers who are interested in understanding administration-related services in Azure. Prior experience of working with Azure is an added advantage.
+This book is for Ansible developers and operators who have an understanding of its core elements and applications but are now looking to enhance their skills in applying automation using Ansible.
 
-With the following software and hardware list you can run all code files present in the book (Chapter 1-10).
+With the following software and hardware list you can run all code files present in the book (Chapter 1-12).
 ### Software and Hardware List
 | Chapter | Software required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
-| 1-10 | MS SQL Server 2016 | Windows Server 2016 |
-|  | Hyper-V | Windows, Mac OS X, and Linux (Any) |
-|  | Active Directory | Windows, Mac OS X, and Linux (Any) |
-|  | PowerShell | Windows, Mac OS X, and Linux (Any) |
-|  | Microsoft Azure | Windows, Mac OS X, and Linux (Any) |
-|  | Azure PowerShell | Windows, Mac OS X, and Linux (Any) |
-|  | Azure CLI | Windows, Mac OS X, and Linux (Any) |
-|  |  | Windows, Mac OS X, and Linux (Any) |
-|  |  | Windows, Mac OS X, and Linux (Any) |
-|  |  | Windows, Mac OS X, and Linux (Any) |
+| 4 | VMware Horizon View 7 or 7.6 | Windows Server 2016 |
+| 4 | VMware vSphere 6 | ESXi 6.5 |
+| 4 | MS Windows Server 2016 | Windows Server 2016 |
+| 4 | MS SQL Express 2012 | Windows Server 2016 |
+| 6 | MS Windows 7 |  |
+| 6 | MS Windows 10 |  |
+| 8 | VMware PCoIP tuning tool | Windows 7 and 10 |
+| 8 | VMware OS optimization tool | Windows 7 and 10 |
+| 10 | MS Office 2016 | Windows, iOS, Android, Max OSX |
+| 12 | VMware Horizon Clients | Windows 7 and 10 |
 
-We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://www.packtpub.com/sites/default/files/downloads/9781789134964_ColorImages.pdf).
+We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://www.packtpub.com/sites/default/files/downloads/9781789802375_ColorImages.pdf).
 
 ### Related products
-* Azure for Architects [[Packt]](https://www.packtpub.com/virtualization-and-cloud/azure-architects?utm_source=github&utm_medium=repository&utm_campaign=9781788397391 ) [[Amazon]](https://www.amazon.com/dp/1788397398)
+* Mastering VMware vSphere 6.7 - Second Edition  [[Packt]](https://prod.packtpub.com/in/application-development/mastering-vmware-vsphere-67-second-edition?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/178961337X)
 
-* Architecting Microsoft Azure Solutions - Exam Guide 70-535 [[Packt]](https://www.packtpub.com/virtualization-and-cloud/architecting-microsoft-azure-solutions-exam-guide-70-535?utm_source=github&utm_medium=repository&utm_campaign=9781788991735 ) [[Amazon]](https://www.amazon.com/dp/1788991737)
+* Implementing VMware Horizon 7.7 - Third Edition  [[Packt]](https://prod.packtpub.com/in/virtualization-and-cloud/implementing-vmware-horizon-77-third-edition?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/1789617847)
 
 *  [[Packt]]() [[Amazon]](https://www.amazon.com/dp/)
 
 *  [[Packt]]() [[Amazon]](https://www.amazon.com/dp/)
 
 ## Get to Know the Author
-**Mustafa Toroman**
-is a program architect and senior system engineer with Authority Partners. He has years of experience in designing and monitoring infrastructure solutions, and has lately been focused on designing new solutions in the cloud and migrating existing solutions to the cloud. He is very interested in DevOps processes and he's also an Infrastructure-as-Code enthusiast. Mustafa has over 30 Microsoft certificates and has been a Microsoft Certified Trainer (MCT) for the last 6 years. He often speaks at international conferences (such as MS Ignite, European Collaboration Summit, and IT/Dev Connections) about cloud technologies, and has been named an MVP for Microsoft Azure for the last three years in a row.
+**James Freeman**
+is an accomplished IT consultant with over 20 years' experience in the technology industry. He has more than 5 years of first-hand experience of solving realworld enterprise problems in production environments using Ansible, frequently introducing Ansible as a new technology to businesses and CTOs for the first time. In addition, he has authored and facilitated bespoke Ansible workshops and training sessions, and has presented at both international conferences and meetups on Ansible.
 
-****
-0
+**Jesse Keating**
+is an accomplished Ansible user, contributor, and presenter. He has been an active member of the Linux and open source community for over 15 years. He has firsthand experience involving a variety of IT activities, software development, and large-scale system administration. He has presented at numerous conferences and meetups, and has written many articles on a variety of topics.
 
 ****
 0
@@ -80,9 +79,9 @@ is a program architect and senior system engineer with Authority Partners. He ha
 0
 
 ## Other books by the authors
-[]()
+[Mastering Ansible](https://www.packtpub.com/networking-and-servers/mastering-ansible?utm_source=github&utm_medium=repository&utm_campaign=9781784395483 )
 
-[]()
+[Mastering Ansible - Second Edition](https://www.packtpub.com/networking-and-servers/mastering-ansible-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781787125681 )
 
 []()
 
@@ -92,3 +91,5 @@ is a program architect and senior system engineer with Authority Partners. He ha
 
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
+
+
