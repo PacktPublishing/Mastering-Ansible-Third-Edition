@@ -1,9 +1,0 @@
----
-- name: demo the filters
-  hosts: localhost
-  gather_facts: false
-  tasks:
-    - name: demo dirname
-      debug:
-        msg: "{{ '/var/log/nova/nova-api.log' | dirname }}"
-
