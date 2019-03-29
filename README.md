@@ -40,23 +40,18 @@ With the following software and hardware list you can run all code files present
 ### Software and Hardware List
 | Chapter | Software required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
-| 4 | VMware Horizon View 7 or 7.6 | Windows Server 2016 |
-| 4 | VMware vSphere 6 | ESXi 6.5 |
-| 4 | MS Windows Server 2016 | Windows Server 2016 |
-| 4 | MS SQL Express 2012 | Windows Server 2016 |
-| 6 | MS Windows 7 |  |
-| 6 | MS Windows 10 |  |
-| 8 | VMware PCoIP tuning tool | Windows 7 and 10 |
-| 8 | VMware OS optimization tool | Windows 7 and 10 |
-| 10 | MS Office 2016 | Windows, iOS, Android, Max OSX |
-| 12 | VMware Horizon Clients | Windows 7 and 10 |
+| All | Ansible 2.7.5 | CentOS 7+, Ubuntu 16.04+ |
+| 4 | AWX | CentOS 7/RHEL7 |
+| 3 | Windows 10 | N/A |
+| 3 | Windows Server 2016/2019 | N/A |
+| 11 | OpenStack (devstack)| Tested on Ubuntu 16.04  |
 
-We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://www.packtpub.com/sites/default/files/downloads/9781789802375_ColorImages.pdf).
+We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://www.packtpub.com/sites/default/files/downloads/9781789951547_ColorImages.pdf).
 
 ### Related products
-* Mastering VMware vSphere 6.7 - Second Edition  [[Packt]](https://prod.packtpub.com/in/application-development/mastering-vmware-vsphere-67-second-edition?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/178961337X)
+* Learning Ansible 2 - Second Edition  [[Packt]](https://prod.packtpub.com/in/networking-and-servers/learning-ansible-2-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781786464231) [[Amazon]](https://www.amazon.com/dp/1786464233)
 
-* Implementing VMware Horizon 7.7 - Third Edition  [[Packt]](https://prod.packtpub.com/in/virtualization-and-cloud/implementing-vmware-horizon-77-third-edition?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/1789617847)
+* Security Automation with Ansible 2  [[Packt]](https://prod.packtpub.com/in/virtualization-and-cloud/security-automation-ansible-2?utm_source=github&utm_medium=repository&utm_campaign=9781788394512) [[Amazon]](https://www.amazon.com/dp/1788394518)
 
 ## Get to Know the Author
 **James Freeman**
