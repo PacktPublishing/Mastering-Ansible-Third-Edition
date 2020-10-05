@@ -52,6 +52,11 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 Click on the following link to see the Code in Action:
 http://bit.ly/2HCcfRE
 
+
+## Errata
+* Page 10: The screenshot for the command **ansible-playbook --version** is incorrect. The correct screenshot is shown below:
+<img src="https://github.com/deepesh-packt/Packt-testing/blob/main/B12929.PNG?raw=true" height="256px" align="center"> 
+
 ### Related products
 * Learning Ansible 2 - Second Edition  [[Packt]](https://prod.packtpub.com/in/networking-and-servers/learning-ansible-2-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781786464231) [[Amazon]](https://www.amazon.com/dp/1786464233)
 
