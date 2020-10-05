@@ -54,7 +54,7 @@ http://bit.ly/2HCcfRE
 
 
 ## Errata
-* Page 10: The screenshot for the command **ansible-playbook --version** is incorrect. The correct screenshot is shown below:
+* **Page 10:** The screenshot for the command **ansible-playbook --version** is incorrect. The correct screenshot is shown below:
 <img src="https://github.com/deepesh-packt/Packt-testing/blob/main/B12929.PNG?raw=true" height="256px" align="center"> 
 
 ### Related products
